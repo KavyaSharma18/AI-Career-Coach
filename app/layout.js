@@ -20,16 +20,13 @@ export default function RootLayout({ children }) {
         baseTheme: dark,
       }}
     >
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" className="dark" suppressHydrationWarning>
         <head>
           <link rel="icon" href="/logo.png" sizes="any" />
         </head>
         <body className={`${inter.className}`}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
           >
             <Header />
             <main className="min-h-screen">{children}</main>
